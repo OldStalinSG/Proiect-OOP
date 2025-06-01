@@ -10,7 +10,8 @@ protected:
 public:
     NrInt(int value = 0) : n(value) {}
     ~NrInt() {}
-
+   void afisare();
+   void citire();
     
     int getN() const { return n; }
 };
