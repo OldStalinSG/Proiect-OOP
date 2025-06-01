@@ -1,8 +1,10 @@
 #pragma once
 
-using namespace std;
-
 class numar {
-    protected :
+protected:
     int n;
+public:
+    numar(int value = 0) : n(value) {}
+    
+    int getN() const { return n; }
 };
