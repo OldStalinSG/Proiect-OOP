@@ -1,6 +1,6 @@
 #include "class.h"
 
-void NrInt::asifare(){
+void NrInt::afisare(){
     cout << n << endl;
 
 }
