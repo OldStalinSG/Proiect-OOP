@@ -6,9 +6,8 @@ using namespace std;
 
 class NrInt {
 protected:
-    int n;
-    int p;
-public:
+    int n; 
+      public:
     NrInt(int value = 0) : n(value) {}
     ~NrInt() {}
 
