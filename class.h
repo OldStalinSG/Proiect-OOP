@@ -1,10 +1,15 @@
 #pragma once
 
-class numar_intreg {
+class NrInt {
 protected:
     int n;
 public:
-    numar_intreg(int value = 0) : n(value) {}
-    
+    NrInt(int value = 0) : n(value) {}
+    ~NrInt() {}
+
+
+
+
+
     int getN() const { return n; }
 };

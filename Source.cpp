@@ -3,8 +3,8 @@
 using namespace std;
 
 int main() {
-    numar_intreg obj1;        
-    numar_intreg obj2(42);
+    NrInt obj1;        
+    NrInt obj2(42);
     int nr;
 
     cout << obj1.getN() << endl;
