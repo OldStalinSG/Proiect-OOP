@@ -7,13 +7,9 @@ using namespace std;
 class NrInt {
 protected:
     int n; 
-      public:
+public:
     NrInt(int value = 0) : n(value) {}
     ~NrInt() {}
-
-
-
-
 
     int getN() const { return n; }
 };
