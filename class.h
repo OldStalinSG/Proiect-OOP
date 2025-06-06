@@ -32,3 +32,4 @@ public:
 
 void afiseazaMeniu();
 
+s
