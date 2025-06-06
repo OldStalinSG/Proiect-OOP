@@ -1,100 +1,77 @@
 #include "class.h"
+#include <iostream>
+#include <limits>
+#include <stdexcept>
 
-
-double getDoubleInput(const string& prompt) {
-    double value;
-    while (true) {
-        cout << prompt;
-        cin >> value;
-        if (cin.good()) {
-            cin.ignore(numeric_limits<streamsize>::max(), '\n');
-            return value;
-        } else {
-            cout << "Input invalid. Te rog introdu un numar valid." << endl;
-            cin.clear();
-            cin.ignore(numeric_limits<streamsize>::max(), '\n');
-        }
-    }
-}
+using namespace std;
 
 int main() {
-    char operatieSimbol;
-    double num1, num2, rezultat;
-    Operatie* op = nullptr;
+    int optiune;
+    double nr1, nr2;
 
-    cout << "--- Calculator Simplu C++ ---" << endl;
-
-    while (true) {
-        cout << "\nOperatii disponibile:" << endl;
-        cout << "  + : Adunare" << endl;
-        cout << "  - : Scadere" << endl;
-        cout << "  * : Inmultire" << endl;
-        cout << "  / : Impartire" << endl;
-        cout << "  r : Radical (pentru un singur numar)" << endl;
-        cout << "  e : Iesire" << endl;
-        cout << "Alege operatia: ";
-        cin >> operatieSimbol;
-
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
-
-        if (operatieSimbol == 'e' || operatieSimbol == 'E') {
-            cout << "La revedere!" << endl;
-            break;
-        }
-
-        if (op != nullptr) {
-            delete op;
-            op = nullptr;
-        }
+    do {
+        afiseazaMeniu();
+        cin >> optiune;
 
         try {
-            if (operatieSimbol == 'r' || operatieSimbol == 'R') {
-                num1 = getDoubleInput("Introdu numarul pentru radical: ");
-                op = new Radical(num1);
-            } else if (operatieSimbol == '+' || operatieSimbol == '-' || operatieSimbol == '*' || operatieSimbol == '/') {
-                num1 = getDoubleInput("Introdu primul numar: ");
-                num2 = getDoubleInput("Introdu al doilea numar: ");
-
-                switch (operatieSimbol) {
-                    case '+':
-                        op = new Adunare(num1, num2);
-                        break;
-                    case '-':
-                        op = new Scadere(num1, num2);
-                        break;
-                    case '*':
-                        op = new Inmultire(num1, num2);
-                        break;
-                    case '/':
-                        op = new Impartire(num1, num2);
-                        break;
+            switch (optiune) {
+                case 1: {
+                    cout << "Introdu primul numar: "; cin >> nr1;
+                    cout << "Introdu al doilea numar: "; cin >> nr2;
+                    Adunare op;
+                    cout << "Rezultat: " << op.calculeaza(nr1, nr2) << endl;
+                    break;
                 }
-            } else {
-                cout << "Operatie '" << operatieSimbol << "' necunoscuta. Te rog incearca din nou." << endl;
-                continue;
+                case 2: {
+                    cout << "Introdu primul numar: "; cin >> nr1;
+                    cout << "Introdu al doilea numar: "; cin >> nr2;
+                    Scadere op;
+                    cout << "Rezultat: " << op.calculeaza(nr1, nr2) << endl;
+                    break;
+                }
+                case 3: {
+                    cout << "Introdu primul numar: "; cin >> nr1;
+                    cout << "Introdu al doilea numar: "; cin >> nr2;
+                    Inmultire op;
+                    cout << "Rezultat: " << op.calculeaza(nr1, nr2) << endl;
+                    break;
+                }
+                case 4: {
+                    cout << "Introdu primul numar: "; cin >> nr1;
+                    cout << "Introdu al doilea numar: "; cin >> nr2;
+                    Impartire op;
+                    cout << "Rezultat: " << op.calculeaza(nr1, nr2) << endl;
+                    break;
+                }
+                case 5: {
+                    cout << "Introdu numarul: "; cin >> nr1;
+                    Radical op;
+                    cout << "Rezultat: " << op.calculeaza(nr1) << endl;
+                    break;
+                }
+                case 6: {
+                    cout << "Introdu baza: "; cin >> nr1;
+                    cout << "Introdu exponentul: "; cin >> nr2;
+                    Putere op;
+                    cout << "Rezultat: " << op.calculeaza(nr1, nr2) << endl;
+                    break;
+                }
+                case 0: {
+                    cout << "La revedere!" << endl;
+                    break;
+                }
+                default: {
+                    cout << "Optiune invalida! Te rog incearca din nou." << endl;
+                    cin.clear();
+                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                    break;
+                }
             }
-
-            if (op != nullptr) {
-                rezultat = op->calculeaza();
-                cout << "Rezultat: " << rezultat << endl;
-                delete op;
-                op = nullptr;
-            }
-
-        } catch (const runtime_error& e) {
-            cerr << "A aparut o eroare: " << e.what() << endl;
-            if (op != nullptr) {
-                delete op;
-                op = nullptr;
-            }
-        } catch (...) {
-            cerr << "A aparut o eroare necunoscuta." << endl;
-             if (op != nullptr) {
-                delete op;
-                op = nullptr;
-            }
+        } catch (const invalid_argument& e) {
+            cout << e.what() << endl;
         }
-    }
+
+    } while (optiune != 0);
 
     return 0;
 }

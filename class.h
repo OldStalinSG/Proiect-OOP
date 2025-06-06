@@ -1,59 +1,34 @@
 #pragma once
-#include <iostream>
-#include <cmath>
-#include <stdexcept>
-#include <string>
-#include <limits>
 
-using namespace std;
-
-class Operatie {
+class Adunare {
 public:
-    virtual ~Operatie() {}
-    virtual double calculeaza() const = 0;
+    double calculeaza(double a, double b);
 };
 
-class OperatieBinara : public Operatie {
-protected:
-    double operand1;
-    double operand2;
+class Scadere {
 public:
-    OperatieBinara(double op1, double op2) : operand1(op1), operand2(op2) {}
+    double calculeaza(double a, double b);
 };
 
-class OperatieUnara : public Operatie {
-protected:
-    double operand;
+class Inmultire {
 public:
-    OperatieUnara(double op) : operand(op) {}
+    double calculeaza(double a, double b);
 };
 
-class Adunare : public OperatieBinara {
+class Impartire {
 public:
-    Adunare(double op1, double op2) : OperatieBinara(op1, op2) {}
-    double calculeaza() const override;
+    double calculeaza(double a, double b);
 };
 
-class Scadere : public OperatieBinara {
+class Radical {
 public:
-    Scadere(double op1, double op2) : OperatieBinara(op1, op2) {}
-    double calculeaza() const override;
+    double calculeaza(double a);
 };
 
-class Inmultire : public OperatieBinara {
+class Putere {
 public:
-    Inmultire(double op1, double op2) : OperatieBinara(op1, op2) {}
-    double calculeaza() const override;
+    double calculeaza(double baza, double exponent);
 };
 
-class Impartire : public OperatieBinara {
-public:
-    Impartire(double op1, double op2) : OperatieBinara(op1, op2) {}
-    double calculeaza() const override;
-};
+void afiseazaMeniu();
 
-class Radical : public OperatieUnara {
-public:
-    Radical(double op) : OperatieUnara(op) {}
-    double calculeaza() const override;
-};
