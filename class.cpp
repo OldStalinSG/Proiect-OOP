@@ -48,10 +48,11 @@ void afiseazaMeniu() {
     cout << "1. Adunare (+)" << endl;
     cout << "2. Scadere (-)" << endl;
     cout << "3. Inmultire (*)" << endl;
-    cout << "4. Impartire (/)" << endl;
+    cout << "4. Impartire cu numere reale(/)" << endl;
     cout << "5. Radical (sqrt)" << endl;
     cout << "6. Ridicare la putere (^)" << endl;
     cout<<"7. La suta din (%)"<<endl;
+    cout<<"8. Impartire cu numere intregi"<<endl;
     cout << "0. Iesire" << endl;
     cout << "Alege o optiune: ";
 }
