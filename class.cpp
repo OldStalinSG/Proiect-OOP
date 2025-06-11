@@ -46,6 +46,7 @@ void afiseazaMeniu() {
     cout << "4. Impartire (/)" << endl;
     cout << "5. Radical (sqrt)" << endl;
     cout << "6. Ridicare la putere (^)" << endl;
+    cout<<"7. La suta din (%)"<<endl;
     cout << "0. Iesire" << endl;
     cout << "Alege o optiune: ";
 }

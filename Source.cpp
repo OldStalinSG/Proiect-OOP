@@ -8,6 +8,7 @@ using namespace std;
 int main() {
     int optiune;
     double nr1, nr2;
+    int nr3;
 
     do {
         afiseazaMeniu();
@@ -54,6 +55,13 @@ int main() {
                     cout << "Introdu exponentul: "; cin >> nr2;
                     Putere op;
                     cout << "Rezultat: " << op.calculeaza(nr1, nr2) << endl;
+                    break;
+                }
+                case 7:{
+                    cout<<"Introdu numarul din care calculam la suta din: "; cin>> nr1;
+                    cout<< "Introdu cat la suta calculam: "; cin>>nr3;
+                    LaSuta op;
+                    cout<<"Rezultat: "<<op.laSuta(nr1, nr3)<<endl;
                     break;
                 }
                 case 0: {
