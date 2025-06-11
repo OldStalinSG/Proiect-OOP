@@ -36,7 +36,7 @@ double Putere::calculeaza(double baza, double exponent) {
 
 double LaSuta::laSuta(double nr, int suta)
 {
-    return ((suta/100)*nr);
+    return (double)((suta/100)*nr);
 }
 
 void afiseazaMeniu() {
