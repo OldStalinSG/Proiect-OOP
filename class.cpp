@@ -2,8 +2,8 @@
 #include <iostream>
 #include <cmath>
 #include <stdexcept>
-
 using namespace std;
+
 double Adunare::calculeaza(double a, double b) {
     return a + b;
 }
@@ -18,14 +18,14 @@ double Inmultire::calculeaza(double a, double b) {
 
 double Impartire::calculeaza(double a, double b) {
     if (b == 0) {
-        throw std::invalid_argument("Eroare: Impartirea la zero nu este permisa!");
+        throw invalid_argument("Eroare: Impartirea la zero nu este permisa!");
     }
     return a / b;
 }
 
 double Radical::calculeaza(double a) {
     if (a < 0) {
-        throw std::invalid_argument("Eroare: Nu se poate calcula radicalul unui numar negativ!");
+        throw invalid_argument("Eroare: Nu se poate calcula radicalul unui numar negativ!");
     }
     return sqrt(a);
 }
@@ -35,7 +35,6 @@ double Putere::calculeaza(double baza, double exponent) {
 }
 
 void afiseazaMeniu() {
-    cout << "\n--- Calculator C++ ---" << endl;
     cout << "1. Adunare (+)" << endl;
     cout << "2. Scadere (-)" << endl;
     cout << "3. Inmultire (*)" << endl;

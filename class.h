@@ -1,5 +1,6 @@
 #pragma once
 
+
 class Adunare {
 public:
     double calculeaza(double a, double b);
@@ -31,3 +32,5 @@ public:
 };
 
 void afiseazaMeniu();
+
+ 

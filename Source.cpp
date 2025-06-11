@@ -1,7 +1,7 @@
-#include "class.h"
 #include <iostream>
 #include <limits>
 #include <stdexcept>
+#include "class.h"
 
 using namespace std;
 
