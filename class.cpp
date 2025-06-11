@@ -44,6 +44,10 @@ int ImpartireIntreg::imp(int nr1, int nr2)
     return nr1/nr2;
 }
 
+int RestImp::rest(int nr1, int nr2){
+    return nr1%nr2;
+}
+
 void afiseazaMeniu() {
     cout << "1. Adunare (+)" << endl;
     cout << "2. Scadere (-)" << endl;
