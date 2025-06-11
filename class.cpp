@@ -48,6 +48,18 @@ int RestImp::rest(int nr1, int nr2){
     return nr1%nr2;
 }
 
+float distanta(Punct2D p1, Punct2D p2){
+    
+    return sqrt(pow(p2.x-p1.x, 2) + pow(p2.y-p1.y, 2));
+
+}
+
+void Punct2D::atribuire(float X, float Y)
+{
+    this->x=X;
+    this->y=Y;
+}
+
 void afiseazaMeniu() {
     cout << "1. Adunare (+)" << endl;
     cout << "2. Scadere (-)" << endl;
@@ -57,6 +69,8 @@ void afiseazaMeniu() {
     cout << "6. Ridicare la putere (^)" << endl;
     cout<<"7. La suta din (%)"<<endl;
     cout<<"8. Impartire cu numere intregi"<<endl;
+    cout<<"9. Restul impartirii"<<endl;
+    cout<<"10. Distanta intre 2 puncte"<<endl;
     cout << "0. Iesire" << endl;
     cout << "Alege o optiune: ";
 }

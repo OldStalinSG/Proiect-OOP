@@ -50,6 +50,18 @@ class RestImp: public ImpartireIntreg
     int rest(int a, int b);
 };
 
+class Punct2D
+{
+    private:
+    float x;
+    float y;
+    public:
+
+    void atribuire(float x, float y);
+
+    float friend distanta(Punct2D p1, Punct2D p2);
+
+};
 
 void afiseazaMeniu();
 
