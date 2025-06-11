@@ -3,6 +3,7 @@
 #include <cmath>
 #include <stdexcept>
 
+using namespace std;
 double Adunare::calculeaza(double a, double b) {
     return a + b;
 }
@@ -34,13 +35,13 @@ double Putere::calculeaza(double baza, double exponent) {
 }
 
 void afiseazaMeniu() {
-    std::cout << "\n--- Calculator C++ ---" << std::endl;
-    std::cout << "1. Adunare (+)" << std::endl;
-    std::cout << "2. Scadere (-)" << std::endl;
-    std::cout << "3. Inmultire (*)" << std::endl;
-    std::cout << "4. Impartire (/)" << std::endl;
-    std::cout << "5. Radical (sqrt)" << std::endl;
-    std::cout << "6. Ridicare la putere (^)" << std::endl;
-    std::cout << "0. Iesire" << std::endl;
-    std::cout << "Alege o optiune: ";
+    cout << "\n--- Calculator C++ ---" << endl;
+    cout << "1. Adunare (+)" << endl;
+    cout << "2. Scadere (-)" << endl;
+    cout << "3. Inmultire (*)" << endl;
+    cout << "4. Impartire (/)" << endl;
+    cout << "5. Radical (sqrt)" << endl;
+    cout << "6. Ridicare la putere (^)" << endl;
+    cout << "0. Iesire" << endl;
+    cout << "Alege o optiune: ";
 }
