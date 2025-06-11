@@ -16,7 +16,7 @@ double Inmultire::calculeaza(double a, double b) {
     return a * b;
 }
 
-double Impartire::calculeaza(double a, double b) {
+double ImpartireReala::calculeaza(double a, double b) {
     if (b == 0) {
         throw invalid_argument("Eroare: Impartirea la zero nu este permisa!");
     }
@@ -37,6 +37,11 @@ double Putere::calculeaza(double baza, double exponent) {
 double LaSuta::laSuta(double nr, int suta)
 {
     return (double)((suta/100.0)*nr);
+}
+
+int ImpartireIntreg::imp(int nr1, int nr2)
+{
+    return nr1/nr2;
 }
 
 void afiseazaMeniu() {

@@ -16,7 +16,7 @@ public:
     double calculeaza(double a, double b);
 };
 
-class Impartire {
+class ImpartireReala {
 public:
     double calculeaza(double a, double b);
 };
@@ -36,6 +36,14 @@ class LaSuta
     public:
     double laSuta(double a,int b);
 };
+
+class ImpartireIntreg
+{
+
+    public:
+    int imp(int a, int b);
+};
+
 
 void afiseazaMeniu();
 

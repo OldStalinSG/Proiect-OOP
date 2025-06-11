@@ -8,7 +8,7 @@ using namespace std;
 int main() {
     int optiune;
     double nr1, nr2;
-    int nr3;
+    int nr3, nr4;
 
     do {
         afiseazaMeniu();
@@ -40,7 +40,7 @@ int main() {
                 case 4: {
                     cout << "Introdu primul numar: "; cin >> nr1;
                     cout << "Introdu al doilea numar: "; cin >> nr2;
-                    Impartire op;
+                    ImpartireReala op;
                     cout << "Rezultat: " << op.calculeaza(nr1, nr2) << endl;
                     break;
                 }
@@ -62,6 +62,13 @@ int main() {
                     cout<< "Introdu cat la suta calculam: "; cin>>nr3;
                     LaSuta op;
                     cout<<"Rezultat: "<<op.laSuta(nr1, nr3)<<endl;
+                    break;
+                }
+                case 8:{
+                    cout << "Introdu primul numar: "; cin>>nr3;
+                    cout<<"Introdu al doilea numar: "; cin>>nr4;
+                    ImpartireIntreg op;
+                    cout<<"Rezultat: "<<op.imp(nr3, nr4)<<endl;
                     break;
                 }
                 case 0: {
