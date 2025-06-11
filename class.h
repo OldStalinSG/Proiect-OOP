@@ -31,6 +31,12 @@ public:
     double calculeaza(double baza, double exponent);
 };
 
+class LaSuta
+{
+    public:
+    double laSuta(double a,int b);
+};
+
 void afiseazaMeniu();
 
  

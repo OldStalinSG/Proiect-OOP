@@ -34,6 +34,11 @@ double Putere::calculeaza(double baza, double exponent) {
     return pow(baza, exponent);
 }
 
+double LaSuta::laSuta(double nr, int suta)
+{
+    return ((suta/100)*nr);
+}
+
 void afiseazaMeniu() {
     cout << "1. Adunare (+)" << endl;
     cout << "2. Scadere (-)" << endl;
