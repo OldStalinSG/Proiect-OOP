@@ -71,6 +71,14 @@ int main() {
                     cout<<"Rezultat: "<<op.imp(nr3, nr4)<<endl;
                     break;
                 }
+                case 9:{
+                    cout<<"Introdu primul numar: "; cin>>nr3;
+                    cout<<"Introdu al doilea numar: "; cin>>nr4;
+                    RestImp op;
+                    cout<<"Rezultat impartire: "<<op.imp(nr3, nr4)<<endl;
+                    cout<<"Restul impartirii: "<<op.rest(nr3, nr4)<<endl;
+                    break;
+                }
                 case 0: {
                     cout << "La revedere!" << endl;
                     break;

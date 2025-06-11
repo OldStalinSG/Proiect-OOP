@@ -44,6 +44,12 @@ class ImpartireIntreg
     int imp(int a, int b);
 };
 
+class RestImp: public ImpartireIntreg
+{
+    public:
+    int rest(int a, int b);
+};
+
 
 void afiseazaMeniu();
 
