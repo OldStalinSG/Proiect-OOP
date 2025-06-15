@@ -57,7 +57,7 @@ void Punct2D::atribuire(float X, float Y)
     this->y=Y;
 }
 
-double logN(double nr)
+double LogNat::logN(double nr)
 {
     return log(nr);
 }

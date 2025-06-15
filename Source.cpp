@@ -88,7 +88,8 @@ int main() {
                 }
                 case 11:{
                     cout<<"Introdu numarul din care vrei sa calculezi logaritmul natural: "; cin>>nr1;
-                    cout<<"Logaritm natural din "<<nr1<<" este "<<logN(nr1)<<endl;
+                    LogNat op;
+                    cout<<"Logaritm natural din "<<nr1<<" este "<<op.logN(nr1)<<endl;
                     break;
                 }
                 case 0: {
