@@ -69,7 +69,7 @@ class Punct2D
 
 class LogNat{
     public:
-    double friend logN(double n);
+    double logN(double n);
 };
 
 void afiseazaMeniu();
