@@ -12,7 +12,7 @@ int main() {
     afiseazaMeniu();
 
     do {
-        cout<<"Introdu numarul aferent operatiei dorite";
+        cout<<"Introdu numarul aferent operatiei dorite ";
         cin >> optiune;
 
         try {

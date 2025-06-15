@@ -38,11 +38,16 @@ double LaSuta::laSuta(double nr, int suta)
 
 int ImpartireIntreg::imp(int nr1, int nr2)
 {
+    if(nr2 == 0)
+        throw invalid_argument("Eroare: Impartirea la 0 nu este permisa!");
     return nr1/nr2;
 }
 
 int RestImp::rest(int nr1, int nr2){
+    if(nr2==0)
+        throw invalid_argument("Eroare: Pentru a putea calcula restul unei impartirii, impartirea trebuie sa poata fi efectuata!");
     return nr1%nr2;
+
 }
 
 float distanta(Punct2D p1, Punct2D p2){
@@ -64,6 +69,8 @@ ostream& operator<<(ostream& os, const Punct2D& p)
 
 double LogNat::logN(double nr)
 {
+    if(nr<=0)
+        throw invalid_argument("Logaritmul nu exista in cazul in care argumentul este negativ!");
     return log(nr);
 }
 
@@ -80,5 +87,4 @@ void afiseazaMeniu() {
     cout<<"10. Distanta intre 2 puncte"<<endl;
     cout<<"11. Logaritm natural dintr-un numar real"<<endl;
     cout << "0. Iesire" << endl;
-    cout << "Alege o optiune: ";
 }
