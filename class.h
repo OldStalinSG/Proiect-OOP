@@ -1,4 +1,8 @@
 #pragma once
+#include <iostream>
+#include <cmath>
+#include <stdexcept>
+using namespace std;
 
 
 class Adunare {
@@ -61,6 +65,11 @@ class Punct2D
 
     float friend distanta(Punct2D p1, Punct2D p2);
 
+};
+
+class LogNat{
+    public:
+    double friend logN(double n);
 };
 
 void afiseazaMeniu();

@@ -1,6 +1,3 @@
-#include <iostream>
-#include <limits>
-#include <stdexcept>
 #include "class.h"
 
 using namespace std;
@@ -87,6 +84,11 @@ int main() {
                     cout<<"Coordonatele celui de-al doilea punct: "; cin>>nr1>>nr2;
                     p2.atribuire(nr1,nr2);
                     cout<<"Distanta intre cele 2 puncte este: "<<distanta(p1,p2)<<endl;
+                    break;
+                }
+                case 11:{
+                    cout<<"Introdu numarul din care vrei sa calculezi logaritmul natural: "; cin>>nr1;
+                    cout<<"Logaritm natural din "<<nr1<<" este "<<logN(nr1)<<endl;
                     break;
                 }
                 case 0: {

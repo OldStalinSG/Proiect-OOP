@@ -1,8 +1,5 @@
 #include "class.h"
-#include <iostream>
-#include <cmath>
-#include <stdexcept>
-using namespace std;
+
 
 double Adunare::calculeaza(double a, double b) {
     return a + b;
@@ -60,6 +57,11 @@ void Punct2D::atribuire(float X, float Y)
     this->y=Y;
 }
 
+double logN(double nr)
+{
+    return log(nr);
+}
+
 void afiseazaMeniu() {
     cout << "1. Adunare (+)" << endl;
     cout << "2. Scadere (-)" << endl;
@@ -71,6 +73,7 @@ void afiseazaMeniu() {
     cout<<"8. Impartire cu numere intregi"<<endl;
     cout<<"9. Restul impartirii"<<endl;
     cout<<"10. Distanta intre 2 puncte"<<endl;
+    cout<<"11. Logaritm natural dintr-un numar real"<<endl;
     cout << "0. Iesire" << endl;
     cout << "Alege o optiune: ";
 }
