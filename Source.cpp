@@ -86,7 +86,8 @@ int main() {
                     p1.atribuire(nr1, nr2);
                     cout<<"Coordonatele celui de-al doilea punct: "; cin>>nr1>>nr2;
                     p2.atribuire(nr1,nr2);
-                    cout<<"Distanta intre cele 2 puncte este: "<<distanta(p1,p2);
+                    cout<<"Distanta intre cele 2 puncte este: "<<distanta(p1,p2)<<endl;
+                    break;
                 }
                 case 0: {
                     cout << "La revedere!" << endl;
