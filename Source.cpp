@@ -9,8 +9,10 @@ int main() {
     Punct2D p1;
     Punct2D p2;
 
+    afiseazaMeniu();
+
     do {
-        afiseazaMeniu();
+        cout<<"Introdu numarul aferent operatiei dorite";
         cin >> optiune;
 
         try {
@@ -83,7 +85,7 @@ int main() {
                     p1.atribuire(nr1, nr2);
                     cout<<"Coordonatele celui de-al doilea punct: "; cin>>nr1>>nr2;
                     p2.atribuire(nr1,nr2);
-                    cout<<"Distanta intre cele 2 puncte este: "<<distanta(p1,p2)<<endl;
+                    cout<<"Distanta intre cele punctul p1"<<p1<<"si punctul p2 "<<p2<<"este: "<<distanta(p1,p2)<<endl;
                     break;
                 }
                 case 11:{

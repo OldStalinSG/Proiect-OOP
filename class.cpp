@@ -57,6 +57,11 @@ void Punct2D::atribuire(float X, float Y)
     this->y=Y;
 }
 
+ostream& operator<<(ostream& os, const Punct2D& p)
+{
+    cout<<"("<<p.x<<", "<<p.y<<") ";
+}
+
 double LogNat::logN(double nr)
 {
     return log(nr);

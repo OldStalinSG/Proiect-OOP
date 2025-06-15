@@ -65,6 +65,8 @@ class Punct2D
 
     float friend distanta(Punct2D p1, Punct2D p2);
 
+    friend ostream& operator<<(ostream& os, const Punct2D& p); 
+
 };
 
 class LogNat{
